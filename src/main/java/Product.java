@@ -1,6 +1,12 @@
 public class Product {
     
+    private static int lastGeneratedId = 0;
+    
     private int id;
+    
+    public Product() {
+        setId(++lastGeneratedId);
+    }
     
     public Product(int id) {
         setId(id);

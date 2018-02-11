@@ -12,9 +12,8 @@ public class ProductTest {
     @Test
     public void testAutoIncrementId() {
         Product p1 = new Product();
-        Assert.assertEquals(1, p1.getId());
         Product p2 = new Product();
-        Assert.assertEquals(2, p2.getId());
+        Assert.assertEquals(p1.getId() + 1, p2.getId());
     }
     
     
