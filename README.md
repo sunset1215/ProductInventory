@@ -1,2 +1,2 @@
-# ProjectInventory
+# ProductInventory
 Practice for TDD
