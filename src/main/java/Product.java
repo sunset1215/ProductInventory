@@ -8,10 +8,6 @@ public class Product {
         setId(++lastGeneratedId);
     }
     
-    public Product(int id) {
-        setId(id);
-    }
-    
     public int getId() {
         return id;
     }

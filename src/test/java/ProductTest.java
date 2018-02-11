@@ -5,8 +5,8 @@ public class ProductTest {
     
     @Test
     public void testShouldStoreId() {
-        Product p = new Product(10);
-        Assert.assertEquals(10, p.getId());
+        Product p = new Product();
+        Assert.assertTrue(p.getId() > 0);
     }
     
     @Test
