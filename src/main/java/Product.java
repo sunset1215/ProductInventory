@@ -5,11 +5,8 @@ public class Product {
     private int id;
     private String name;
     
-    public Product() {
-        setId(++lastGeneratedId);
-    }
-    
     public Product(String name) {
+        setId(++lastGeneratedId);
         setName(name);
     }
     

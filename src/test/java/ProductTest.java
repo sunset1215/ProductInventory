@@ -11,15 +11,15 @@ public class ProductTest {
     
     @Test
     public void testShouldStoreId() {
-        Product p = new Product();
+        Product p = new Product("p");
         logger.debug("id={}", p.getId());
         assertTrue(p.getId() > 0);
     }
     
     @Test
     public void testAutoIncrementId() {
-        Product p1 = new Product();
-        Product p2 = new Product();
+        Product p1 = new Product("p1");
+        Product p2 = new Product("p2");
         logger.debug("p1.id={}, p2.id={}", p1.getId(), p2.getId());
         assertEquals(p1.getId() + 1, p2.getId());
     }
