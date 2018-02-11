@@ -27,6 +27,7 @@ public class ProductTest {
     @Test
     public void testShouldStoreName() {
         Product p = new Product("Lays");
+        logger.debug("name={}", p.getName());
         assertEquals("Lays", p.getName());
     }
     

@@ -3,9 +3,14 @@ public class Product {
     private static int lastGeneratedId = 0;
     
     private int id;
+    private String name;
     
     public Product() {
         setId(++lastGeneratedId);
+    }
+    
+    public Product(String name) {
+        setName(name);
     }
     
     public int getId() {
@@ -14,5 +19,13 @@ public class Product {
     
     private void setId(int id) {
         this.id = id;
+    }
+    
+    public String getName() {
+        return name;
+    }
+    
+    private void setName(String name) {
+        this.name = name;
     }
 }
