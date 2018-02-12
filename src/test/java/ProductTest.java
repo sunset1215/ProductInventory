@@ -24,7 +24,9 @@ public class ProductTest {
         p1.setPrice(new BigDecimal(DEFAULT_PRICE));
         p1.setQuantity(DEFAULT_QUANTITY);
         p1.setCategory(DEFAULT_CATEGORY);
-        
+    }
+    
+    private void setUpSecondProduct() {
         p2 = new Product("p2");
         p2.setPrice(new BigDecimal(DEFAULT_PRICE));
         p2.setQuantity(DEFAULT_QUANTITY);
@@ -39,6 +41,7 @@ public class ProductTest {
     
     @Test
     public void testAutoIncrementId() {
+        setUpSecondProduct();
         logger.debug("p1.id={}, p2.id={}", p1.getId(), p2.getId());
         assertEquals(p1.getId() + 1, p2.getId());
     }
@@ -56,6 +59,7 @@ public class ProductTest {
     
     @Test
     public void testSamePriceOnDifferentProductShouldBeEqual() {
+        setUpSecondProduct();
         assertEquals(p1.getPrice(), p2.getPrice());
     }
     

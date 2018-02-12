@@ -13,6 +13,8 @@ public class Product {
     public Product(String name) {
         setId(++lastGeneratedId);
         setName(name);
+        setPrice(new BigDecimal(0.00));
+        setQuantity(0);
     }
     
     public int getId() {
