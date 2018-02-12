@@ -1,3 +1,4 @@
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -13,7 +14,7 @@ public class ProductTest {
     private static final Logger logger = LoggerFactory.getLogger(ProductTest.class);
     private static final double DEFAULT_PRICE = 12.12;
     private static final int DEFAULT_QUANTITY = 10;
-    private static final Category DEFAULT_CATEGORY = Product.Category.UNSELECTED;
+    private static final Product.Category DEFAULT_CATEGORY = Product.Category.UNSELECTED;
     
     private Product p1;
     private Product p2;
@@ -71,5 +72,9 @@ public class ProductTest {
         assertEquals(DEFAULT_CATEGORY, p1.getCategory());
     }
     
+    @Test
+    public void testGetCategoryName() {
+        assertEquals("UNSELECTED", p1.getCategory().name());
+    }
     
 }

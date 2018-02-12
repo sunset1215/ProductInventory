@@ -2,19 +2,24 @@ import java.math.BigDecimal;
 
 public class Product {
     
+    public enum Category {
+        UNSELECTED
+    }
+    
     private static int lastGeneratedId = 0;
     
     private int id;
     private String name;
     private BigDecimal price;
     private int quantity;
-    private String category;
+    private Category category;
     
     public Product(String name) {
         setId(++lastGeneratedId);
         setName(name);
         setPrice(new BigDecimal(0.00));
         setQuantity(0);
+        setCategory(Category.UNSELECTED);
     }
     
     public int getId() {
@@ -49,11 +54,11 @@ public class Product {
         this.quantity = quantity;
     }
     
-    public String getCategory() {
+    public Category getCategory() {
         return category;
     }
     
-    public void setCategory(String category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 }
