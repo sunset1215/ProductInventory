@@ -8,6 +8,7 @@ public class Product {
     private String name;
     private BigDecimal price;
     private int quantity;
+    private String category;
     
     public Product(String name) {
         setId(++lastGeneratedId);
@@ -44,5 +45,13 @@ public class Product {
     
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+    
+    public String getCategory() {
+        return category;
+    }
+    
+    public void setCategory(String category) {
+        this.category = category;
     }
 }
