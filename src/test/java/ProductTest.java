@@ -13,7 +13,7 @@ public class ProductTest {
     private static final Logger logger = LoggerFactory.getLogger(ProductTest.class);
     private static final double DEFAULT_PRICE = 12.12;
     private static final int DEFAULT_QUANTITY = 10;
-    private static final String DEFAULT_CATEGORY = "Snacks";
+    private static final Category DEFAULT_CATEGORY = Product.Category.UNSELECTED;
     
     private Product p1;
     private Product p2;
@@ -23,14 +23,12 @@ public class ProductTest {
         p1 = new Product("p1");
         p1.setPrice(new BigDecimal(DEFAULT_PRICE));
         p1.setQuantity(DEFAULT_QUANTITY);
-        p1.setCategory(DEFAULT_CATEGORY);
     }
     
     private void setUpSecondProduct() {
         p2 = new Product("p2");
         p2.setPrice(new BigDecimal(DEFAULT_PRICE));
         p2.setQuantity(DEFAULT_QUANTITY);
-        p2.setCategory(DEFAULT_CATEGORY);
     }
     
     @Test
