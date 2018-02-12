@@ -1,9 +1,12 @@
+import java.math.BigDecimal;
+
 public class Product {
     
     private static int lastGeneratedId = 0;
     
     private int id;
     private String name;
+    private BigDecimal price;
     
     public Product(String name) {
         setId(++lastGeneratedId);
@@ -24,5 +27,13 @@ public class Product {
     
     private void setName(String name) {
         this.name = name;
+    }
+    
+    public BigDecimal getPrice() {
+        return price;
+    }
+    
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 }
