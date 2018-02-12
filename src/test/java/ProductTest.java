@@ -50,5 +50,12 @@ public class ProductTest {
         assertEquals(p1.getPrice(), p2.getPrice());
     }
     
+    @Test
+    public void testShouldStoreQuantity() {
+        Product p = new Product("p");
+        p.setQuantity(10);
+        assertEquals(10, p.getQuantity());
+    }
+    
     
 }
